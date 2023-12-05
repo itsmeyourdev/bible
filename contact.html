@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- Include Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(image/bgk.jpg);
+            background-size: cover;
+            color: rgb(255, 255, 255);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.678);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: #f1f1f1;
+            border-radius: 2%;
+            border-color: #fff;
+        }
+
+        h2 {
+            color: #fafafa;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        /* Update label color to white */
+        label {
+            margin-bottom: 8px;
+            color: white;
+        }
+
+        input, textarea {
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid rgb(0, 0, 0);
+            border-radius: 4px;
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #eeca2c;
+            color: rgb(172, 26, 26);
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #df2323;
+            color: yellow;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .social-icons a:hover {
+            color: #ffd20b;
+        }
+
+        .bible-verse {
+            font-style: italic;
+            margin-top: 30px;
+            color: rgb(255, 255, 255);
+        }
+
+        /* Media Query for Mobile View */
+        @media only screen and (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+
+            input, textarea, button {
+                margin-bottom: 10px;
+            }
+        }
+
+        /* Add styles for the sidebar */
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #9f0808;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: yellow;
+            
+        }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        #main {
+            transition: margin-left .5s;
+            padding: 16px;
+        }
+
+        /* Add a button to open the sidebar */
+        .openbtn {
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #f1e46a;
+            color:rgb(180, 30, 30);
+            padding: 10px 15px;
+            border: none;
+        }
+
+        .openbtn:hover {
+            background-color: #bd2121;
+            color: yellow;
+        }
+
+        .footer {
+    background-color: rgb(180, 30, 30);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+ /* Set the hyperlink color to yellow */
+ .footer a {
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Add a button to open the sidebar -->
+<div id="main">
+    <button class="openbtn" onclick="openNav()">☰ Click here</button>
+</div>
+
+<!-- Add the sidebar content -->
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="colossians1.html">Colossians 1</a>
+    <a href="colossians2.html">Colossians 2</a>
+    <a href="colossians3.html">Colossians 3</a>
+    <a href="colossians4.html">Colossians 4</a>    
+</div>
+
+<div class="container">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+
+    <div class="social-icons">
+        <a href="#https://www.facebook.com/" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="#https://twitter.com/Alexzandra23212" title="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#https://instagram.com/jmes_mteo?igshid=NzZlODBkYWE4Ng==" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <!-- Link Gmail icon to a placeholder Gmail address -->
+        <a href="https://mail.google.com/mail/u/0/#inbox" title="Gmail"><i class="far fa-envelope"></i></a>
+        <a href="#https://www.linkedin.com/in/alexzandra-sabangan-aab6852a3/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    </div>
+
+    <div class="bible-verse">
+        <p>"For I know the plans I have for you, declares the LORD, plans for welfare and not for evil, to give you a future and a hope." - Jeremiah 29:11</p>
+    </div>
+</div>
+
+<script>
+    function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+    }
+
+    function submitForm() {
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var message = document.getElementById("message").value;
+
+        if (name && email && message) {
+            alert("Form submitted successfully!");
+        } else {
+            alert("Please fill in all fields.");
+        }
+    }
+</script>
+
+<div class="footer">
+    <p>&copy; 2023 YFCBible. All rights reserved. | Credits to <a href="https://www.biblegateway.com/" target="_blank">BibleGateway</a></p>
+</div>
+
+
+</body>
+</html>

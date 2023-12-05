@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <!-- Include Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(image/bgk.jpg);
+            background-size: cover;
+            color: rgb(255, 255, 255);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h2, h3, p {
+            text-align: center;
+        }
+
+        h2 {
+            color: #fafafa;
+            font-size: 32px;
+        }
+
+        p {
+            color: #fafafa;
+            font-size: 16px;
+        }
+
+        img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #developer-profile {
+            background-color: rgba(54, 54, 54, 0.39);
+            border-radius: 10px;
+            padding: 2px;
+            margin-top: 2px;
+        }
+
+        /* Sidebar styles */
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #9f0808;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: yellow;
+        }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        #main {
+            transition: margin-left .2s;
+            padding: 16px;
+        }
+
+        .openbtn {
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #d42d2d;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+        }
+
+        .openbtn:hover {
+            background-color: #e95a5a;
+        }
+
+        .footer {
+            background-color: rgb(180, 30, 30);
+            color: white;
+            text-align: center;
+            padding: 1px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        /* Media query for mobile view */
+        @media only screen and (max-width: 600px) {
+            h2 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            img {
+                width: 100px;
+                height: 100px;
+                margin-bottom: 10px;
+            }
+        }
+
+         /* Set the hyperlink color to yellow */
+         .footer a {
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Add a button to open the sidebar -->
+    <div id="main">
+        <button class="openbtn" onclick="openNav()">☰ Menu</button>
+        <div id="about-content">
+            <img src="image/logo (1).png" alt="App Logo">
+            <h2>About Us</h2>
+            <p>We specialize in creating custom Bible versions that are specifically tailored to meet the needs of youth in our community. Our mission is to make the Bible more accessible and enjoyable to young people, and to provide them with a strong foundation of faith.</p>
+        </div>
+
+        <!-- Developer Profile Section -->
+        <div id="developer-profile">
+            <h2>Meet the Developer</h2>
+            <p>Alexzandra Sabangan</p>
+            <p>James Mateo</p>
+            <p> Jer Benjamin Carpio</p>
+        </div>
+    </div>
+
+    <!-- Add the sidebar content -->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="colossians1.html">Colossians 1</a>
+        <a href="colossians2.html">Colossians 2</a>
+        <a href="colossians3.html">Colossians 3</a>
+        <a href="colossians4.html">Colossians 4</a>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2023 YFCBible. All rights reserved. | Credits to <a href="https://www.biblegateway.com/" target="_blank">BibleGateway</a></p>
+    </div>
+
+    <!-- JavaScript functions for sidebar -->
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft= "0";
+        }
+    </script>
+
+</body>
+
+</html>

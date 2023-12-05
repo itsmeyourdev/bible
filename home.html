@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- Include Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(image/bgk.jpg);
+            background-size: cover;
+            color: rgb(255, 255, 255);
+        }
+
+        h2, h3, p {
+            text-align: center;
+        }
+
+        h2 {
+            color: #fafafa;
+            margin-top: 40px;
+            font-size: 32px;
+        }
+
+        h3 {
+            color: #fafafa;
+            margin-top: 10px;
+            font-size: 24px;
+        }
+
+        p.bible-verse {
+            font-style: italic;
+            margin-top: 20px;
+            color: rgb(255, 255, 255);
+            font-size: 18px;
+        }
+
+        /* Add styles for the sidebar */
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #9f0808;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: yellow;
+        }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        #main {
+            transition: margin-left .5s;
+            padding: 16px;
+        }
+
+        /* Add a button to open the sidebar */
+        .openbtn {
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #d42d2d;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+        }
+
+        .openbtn:hover {
+            background-color: #e95a5a;
+        }
+
+        .footer {
+            background-color: rgb(180, 30, 30);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        /* Set the hyperlink color to yellow */
+        .footer a {
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Add a button to open the sidebar -->
+<div id="main">
+    <button class="openbtn" onclick="openNav()">☰ Menu</button>
+</div>
+
+<!-- Add the sidebar content -->
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="colossians1.html">Colossians 1</a>
+    <a href="colossians2.html">Colossians 2</a>
+    <a href="colossians3.html">Colossians 3</a>
+    <a href="colossians4.html">Colossians 4</a>
+</div>
+
+<!-- Content for YFC BIBLE, BOOK OF COLOSSIANS -->
+<h2>YFC BIBLE</h2>
+<h3>BOOK OF COLOSSIANS</h3>
+<p class="bible-verse">Colossians 1:3 - "We always thank God, the Father of our Lord Jesus Christ, when we pray for you."</p>
+
+<!-- Modified footer with a yellow hyperlink -->
+<div class="footer">
+    <p>&copy; 2023 YFCBible. All rights reserved. | Credits to <a href="https://www.biblegateway.com/" target="_blank">BibleGateway</a></p>
+</div>
+
+<!-- JavaScript functions for sidebar -->
+<script>
+    function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+    }
+</script>
+
+</body>
+</html>
